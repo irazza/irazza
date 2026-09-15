@@ -1,8 +1,8 @@
-# Hi, I'm Alberto Azzari 👋
+# Hi, I'm Alberto 👋
 
 **PhD in Artificial Intelligence — Time Series | AI Engineer | Starting Postdoc in Reinforcement Learning**
 
-I'm Alberto Azzari ([@irazza](https://github.com/irazza)), PhD in AI from Politecnico di Torino. I work on time series under different aspects — distances, features, and evaluation — and I build fast, production-ready tools in **Rust + Python**. I spent 6 months at **Accenture as an AI Engineer for banking systems**, and I'm now starting a **postdoc in Reinforcement Learning**.
+I'm Alberto ([@irazza](https://github.com/irazza)), PhD in AI from Politecnico di Torino. I work on time series under different aspects — distances, features, and evaluation — and I build fast, production-ready tools in **Rust + Python**. I spent 6 months at **Accenture as an AI Engineer for banking systems**, and I'm now starting a **postdoc in Reinforcement Learning**.
 
 <!-- TODO: replace the placeholder links below with your real URLs -->
 [![GitHub](https://img.shields.io/badge/GitHub-irazza-black?logo=github)](https://github.com/irazza)
