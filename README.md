@@ -19,42 +19,6 @@ I'm Alberto ([@irazza](https://github.com/irazza)), PhD in Artificial Intelligen
 - 🚀 **Next: Postdoc in Reinforcement Learning** — scalable RL pipelines + model-based search for real-world problems (see below)
 - 🦀 I love Rust for performance, Python for usability, and benchmarking everything against the state of the art
 
-## 🎓 PhD thesis
-
-### [On Mining Time Series Data with Random Forest Models: Perspectives from Classification, Anomaly Detection, and Distance Measures](https://tesidottorato.depositolegale.it/bitstream/20.500.14242/364969/1/thesis.pdf)
-
-*Doctoral Program in Artificial Intelligence (38th cycle) — University of Verona & Politecnico di Torino, 2026.*
-*Supervisor: Prof. Pietro Sala. Co-supervisors: Prof. Manuele Bicego, Prof. Carlo Combi.*
-
-Random Forests are a cornerstone of tabular data analysis — robust, interpretable, and effective on small datasets — yet their adaptation to the temporal domain is still largely unexplored. The thesis pushes forest-based models into time series along four complementary directions, using **intraoperative motor evoked potentials (MEPs)** recorded during neurosurgery as a demanding real-world case study, while keeping the proposed methods general.
-
-**1. Classification of intraoperative MEPs**
-Built a dedicated dataset from intraoperative recordings and systematically evaluated classifiers × signal representations. Random Forest on TSFRESH features reached **93%** accuracy on two-muscle, **83%** on four-muscle, and **78%** on the hardest six-muscle mixed-protocol task — against **47.4 ± 11.9%** for ten expert neurophysiologists on the same signals.
-→ *Computers in Biology and Medicine* (2024); oral presentation at EANS.
-
-**2. CISOF — anomaly detection and *early* detection**
-Proposed the Canonical Isolation Tree/Forest, the first extension of the Isolation Forest principle to time series where the anomaly affects the whole sequence, plus a formulation for detecting anomalies *before* they fully manifest. Fully unsupervised and patient-specific: it only needs the baseline acquired at the start of the procedure. Mean ROC-AUC **0.844** on detection and **0.667** on early detection, beating every competitor (IForest, OC-SVM, SOD, LOF-cDTW, HBOS, ECOD, MCD) with statistically significant gains (Wilcoxon signed-rank).
-→ Submitted to *Journal of Healthcare Informatics Research*; patent application filed.
-
-**3. TSRF-Dist — a novel forest-based time series distance**
-A distance derived from **Extremely Randomized Canonical Interval Forests**, transposing Random Forest–based distances (RatioRF, Zhu) to the temporal domain. On the UCR archive it ranks **first overall**, with mean ARI **0.36 / 0.27 / 0.31** across the three dataset groups versus **0.19 / 0.13 / 0.23** for the best classical elastic distances (DTW, cDTW, MSM, TWE, ERP, …) — the gap over the runner-up is statistically significant.
-→ *Data Mining and Knowledge Discovery* 39:27 (2025), [doi:10.1007/s10618-025-01098-3](https://doi.org/10.1007/s10618-025-01098-3)
-
-**4. [tsdistances](https://github.com/irazza/tsdistances) — making all of this usable at scale**
-A Python library with a Rust backend implementing elastic distances with wavefront (anti-diagonal SIMD) dynamic programming, tiling, and GPU kernels. **5.25×** faster with multi-core CPU and **26.59×** with GPU over the single-threaded baseline; on a single thread it is the fastest CPU implementation on every one of the 23 benchmark datasets, ~**2.3×** faster than `aeon` and **24%** faster than the highly optimized C++ DTAI — with GPU `f32` results deviating at most **0.67%** from the `f64` CPU reference.
-→ *ACM Transactions on Mathematical Software*, [doi:10.1145/3802579](https://doi.org/10.1145/3802579)
-
-📄 [Read the thesis (PDF)](https://tesidottorato.depositolegale.it/bitstream/20.500.14242/364969/1/thesis.pdf) · [record page](https://tesidottorato.depositolegale.it/handle/20.500.14242/364969)
-
-## 📚 Selected publications
-
-- **TSRF-Dist: a novel time series distance based on extremely randomized canonical interval forests** — A. Azzari, M. Bicego, C. Combi, et al. *Data Mining and Knowledge Discovery* 39:27 (2025). [doi:10.1007/s10618-025-01098-3](https://doi.org/10.1007/s10618-025-01098-3)
-- **tsdistances: a high-performance Python library for time series distances with GPU support** — A. Azzari, et al. *ACM Transactions on Mathematical Software*. [doi:10.1145/3802579](https://doi.org/10.1145/3802579)
-- **Machine learning allows expert level classification of intraoperative motor evoked potentials during neurosurgical procedures** — A. Boaro, A. Azzari, F. Basaldella, et al. *Computers in Biology and Medicine* 180:109032 (2024). [doi:10.1016/j.compbiomed.2024.109032](https://doi.org/10.1016/j.compbiomed.2024.109032)
-- **Machine learning approaches for the automated classification of intraoperative motor evoked potentials. A pilot study** — A. Boaro, A. Azzari, S. Nunes, et al. *Brain and Spine* 2:101359 (2022).
-- **An empirical characterization of the stability of isolation forest results** — A. Azzari, M. Bicego. *IAPR Joint Int. Workshops S+SSPR* (2024), pp. 166–176. Extended with M. Bicego, T. G. Dietterich, S. Liu and A. Mensi into *On the Stability of the Isolation Forest Results* (in preparation for IEEE TKDE) — code: [if_stability](https://github.com/irazza/if_stability).
-- CISOF (detection and early detection of pathological MEPs) — under review at *Journal of Healthcare Informatics Research*; patent application filed.
-
 ## 🚀 Main project: [tsdistances](https://github.com/irazza/tsdistances)
 
 `tsdistances` is a **Python library with a Rust backend** for fast pairwise distances between sets of time series.
