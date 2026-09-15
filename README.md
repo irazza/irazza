@@ -42,14 +42,14 @@ A distance derived from **Extremely Randomized Canonical Interval Forests**, tra
 
 **4. [tsdistances](https://github.com/irazza/tsdistances) — making all of this usable at scale**
 A Python library with a Rust backend implementing elastic distances with wavefront (anti-diagonal SIMD) dynamic programming, tiling, and GPU kernels. **5.25×** faster with multi-core CPU and **26.59×** with GPU over the single-threaded baseline; on a single thread it is the fastest CPU implementation on every one of the 23 benchmark datasets, ~**2.3×** faster than `aeon` and **24%** faster than the highly optimized C++ DTAI — with GPU `f32` results deviating at most **0.67%** from the `f64` CPU reference.
-→ *ACM Transactions on Mathematical Software*
+→ *ACM Transactions on Mathematical Software*, [doi:10.1145/3764567](https://doi.org/10.1145/3764567)
 
 📄 [Read the thesis (PDF)](https://tesidottorato.depositolegale.it/bitstream/20.500.14242/364969/1/thesis.pdf) · [record page](https://tesidottorato.depositolegale.it/handle/20.500.14242/364969)
 
 ## 📚 Selected publications
 
 - **TSRF-Dist: a novel time series distance based on extremely randomized canonical interval forests** — A. Azzari, M. Bicego, C. Combi, et al. *Data Mining and Knowledge Discovery* 39:27 (2025). [doi:10.1007/s10618-025-01098-3](https://doi.org/10.1007/s10618-025-01098-3)
-- **tsdistances: a high-performance Python library for time series distances with GPU support** — *ACM Transactions on Mathematical Software*.
+- **tsdistances: a high-performance Python library for time series distances with GPU support** — A. Azzari, et al. *ACM Transactions on Mathematical Software*. [doi:10.1145/3764567](https://doi.org/10.1145/3764567)
 - **Machine learning allows expert level classification of intraoperative motor evoked potentials during neurosurgical procedures** — A. Boaro, A. Azzari, F. Basaldella, et al. *Computers in Biology and Medicine* 180:109032 (2024). [doi:10.1016/j.compbiomed.2024.109032](https://doi.org/10.1016/j.compbiomed.2024.109032)
 - **Machine learning approaches for the automated classification of intraoperative motor evoked potentials. A pilot study** — A. Boaro, A. Azzari, S. Nunes, et al. *Brain and Spine* 2:101359 (2022).
 - **An empirical characterization of the stability of isolation forest results** — A. Azzari, M. Bicego. *IAPR Joint Int. Workshops S+SSPR* (2024), pp. 166–176. Extended with M. Bicego, T. G. Dietterich, S. Liu and A. Mensi into *On the Stability of the Isolation Forest Results* (in preparation for IEEE TKDE) — code: [if_stability](https://github.com/irazza/if_stability).
